@@ -3,7 +3,7 @@ import axios from 'axios';
 import "../../styles/login.scss"
 import { Link } from 'react-router-dom';
 import {sz} from '../../assets/index'
-
+import Investorpage from '../../pages/Investorpage';
 import Investors from '../../pages/Investors';
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -80,6 +80,7 @@ const Login = () => {
        </p>
       <button type='submit' id='login' onClick={<Link to="/pages/Investors"></Link>}>Login</button>
       <Link to="/pages/Investors"> investors</Link>
+      <Link to="/pages/Investorpage"> Investorpage</Link>
       </form>
         
         {/* loin footer like forgot  */}

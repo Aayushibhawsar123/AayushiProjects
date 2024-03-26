@@ -1,0 +1,734 @@
+.mainInvestor1 {
+    background-color: white;
+    margin-top: 5%;
+    margin-left: 5%; /* Increase left margin for larger screens */
+    margin-right: 5%; /* Increase right margin for larger screens */
+    height: 100%; /* Change from fixed height to auto */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
+    color: rgb(15, 15, 15);
+    margin-bottom: 5%;
+    overflow-x: hidden;
+  }
+  .mainClass{
+     
+    height: 180%;
+    display: grid;
+  }
+  /* Media query for large screens */
+  
+  
+  .inverHeader {
+    position: fixed;
+  }
+  
+  .headerImage {
+    margin-left: 1.3%;
+    float: right;
+    margin-top: -1%;
+  }
+  
+  .headerImage img {
+    width: 150px;
+    height: 130px;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .blinking {
+    animation: blink 1s infinite;
+    width: 1%;
+  }
+  
+  
+  .vertical-line {
+    border-left: 1px solid black; /* Adjust thickness and color as needed */
+    height: 500px; /* Adjust height as needed */
+    width: 100%;
+    border-color: rgb(223, 220, 220);
+    margin-left: 24%;/* Optional margin to separate from other content */
+  }
+  .horizontal-line {
+    border-bottom: 1px solid black; /* Adjust thickness and color as needed */
+    margin-top: 8.5%;
+    width: 100%;
+    border-color: rgb(231, 231, 231);
+    margin-left: 24%;
+    margin-right: 70%;
+    border-radius: 15px;
+     /* Optional margin to separate from other content */
+  }
+  
+    .headerLink1
+    {
+      list-style-type:circle;
+      color: aliceblue;
+    }
+    .headerLink1 a{
+      color: rgb(216, 148, 2);
+      font-weight: bolder;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: medium;
+    }
+
+    .link{
+  
+     float: right;
+     margin-left:2%;
+     margin-top: .5%;
+     
+      
+    }
+  
+   
+
+
+  .menuIcon {
+    background-color: transparent;
+    border: none;
+    color: rgb(24, 23, 23);
+    font-size: 13px;
+    cursor: pointer;
+    margin-top:0.2%;
+  }
+  
+  .sidebar1 {
+    width: 230px;
+    background-color: #f4f4f4;
+    position: fixed;
+    top: 11%;
+    left: -453px;
+    height: 70%;
+    transition: left 0.3s ease-in-out;
+    position: absolute;
+
+    background-color: white;
+ /* Adjust width for large screens */
+  margin-left:5%; /* Adjust left margin for large screens */
+  margin-top: -1%;
+  margin-bottom: 3%;
+ /* Change from fixed height to auto */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(70, 69, 69, 0.5);
+  color: rgb(15, 15, 15);
+ ;
+  }
+  
+  .sidebar1.open {
+    left: 0;
+  }
+  
+  .close-btn {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+ .sidebar1 ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+ .sidebar1 li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  @media only screen and (min-width: 1800px) {
+    .mainInvestor1 {
+      margin-left: 5%; /* Further increase left margin for larger screens */
+      margin-right: 5%; /* Further increase right margin for larger screens */
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .mainInvestor1 {
+      margin-left: 2%; /* Adjust left margin for smaller screens */
+      margin-right: 2%; /* Adjust right margin for smaller screens */
+    }
+  }
+  @media only screen and (min-width: 1074px) {
+    .mainInvestor1 {
+      margin-left: 5%; /* Further increase left margin for larger screens */
+      margin-right: 5%; /* Further increase right margin for larger screens */
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .mainInvestor1 {
+      margin-left: 2%; /* Further increase left margin for larger screens */
+      margin-right: 33%;
+      overflow-y: hidden; /* Further increase right margin for larger screens */
+    }
+    .headerImage img {
+      width: 25px;
+      height: 25px;
+      margin-left: 0%;
+    }
+    .headerLink1 a{
+      color: rgb(216, 148, 2);
+      font-weight: bolder;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 7px;
+      margin-left: -10px;
+     
+    }
+.link{
+  
+      float:right;
+      
+      margin-top: .5%;  
+     }
+     .sidebar1 {
+      width: 190px;
+      background-color: #f4f4f4;
+      top: 9%;
+      left: -453px;
+      height: 44%;
+      transition: left 0.3s ease-in-out;
+      position: absolute;
+  
+      background-color: white;
+   /* Adjust width for large screens */
+    margin-left:5%; /* Adjust left margin for large screens */
+    margin-top: -1%;
+    margin-bottom: 3%;
+   /* Change from fixed height to auto */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(70, 69, 69, 0.5);
+    color: rgb(15, 15, 15);
+   ;
+    }
+    .vertical-line {
+      width: 0.2%;
+      border-left: 0;
+    }
+    .horizontal-line
+    {
+      width: 0.2%;
+    }
+    
+
+    
+    
+    
+  }
+  
+ 
+  
+  .inverHeader {
+    position: fixed;
+  }
+  
+  
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .blinking {
+    animation: blink 1s infinite;
+    width: 1%;
+  }
+  
+  /* Media query for large screens */
+ 
+   /* Dropdown Styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f2f2f2;
+}
+
+/* Show the dropdown menu when hovering over its parent */
+.linkSectionTwo:hover .dropdown-menu {
+  display: block;
+}
+
+/* Styling the dropdown arrow */
+.dropdown-arrow {
+  margin-left: 5px;
+}
+
+  
+     /*---------------------------------------------------------------------  */
+   
+  
+   
+    
+  
+  
+  
+  
+  .sidebarSection p {
+    color: white;
+    font-size: 3px;
+  }
+  
+  
+ 
+ 
+    .innerSection
+    {
+      background-color:#001442;
+      width: 93%;
+      margin-top: 2%;
+      margin-left: 4%;
+      height: 85%;
+      margin-bottom: 2%;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(87, 85, 85, 0.5);
+      color : rgb(15, 15, 15);
+      margin-top: -1%;
+    }
+    .innerSection p{
+      color: #ececec;
+      font-size: 3px;
+    }
+    .innerSection h5{
+      color: white;
+      margin-left: 2%;
+      margin-top: 1%;
+      margin-top: 3%;
+    }
+    .sidebarSection h5{
+      color: black;
+      margin-left: 3%;
+      margin-top: 8%;
+      
+  
+    }
+  
+    .linkSectionTwo
+    {
+      color: white;
+     
+      margin-top: 3%;
+      margin-left: 4%;
+      margin-right: 2%;
+      border-radius: 5px;
+      border:.3px solid #1e1111;
+      background-color: white;
+      height: 15%;
+      font-size: 5px;
+    }
+  
+    .linkSectionTwo a
+    {
+       
+       text-align: center;
+       margin-left:4%;
+       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       font-size: 12px; 
+    } 
+  
+    .portfolioSection {
+      background-color: #001442;
+      width: 67%; /* Adjust width for large screens */
+      margin-top: -43%;
+      margin-left: 22.5%; /* Adjust left margin for large screens */
+      margin-right: 2%;
+      height: 39%;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(25, 24, 24, 0.5);
+      color: rgb(245, 245, 245);
+      position: absolute;
+    }
+    
+   .portfolioSection h5{
+    margin-top: 1%;
+    margin-left: 3%;
+  }
+ 
+  .portfolioSection .innerPort
+  {
+     background-color: white ;
+     width: 98%;
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  height: 82%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(25, 24, 24, 0.5);
+  color : rgb(15, 15, 15);
+  position: absolute;
+  }
+ 
+  .innerPort .row1
+  {
+   margin-left: 20%;
+   margin-top: 8%;
+  }
+  .innerPort .row2
+  {
+   margin-left: 20%;
+   margin-top: 8%;
+  }
+  .column {
+   float: left;
+   width: 50%;
+   padding: 10px;
+   height: 20px; /* Should be removed. Only for demonstration */
+ }
+ .row1:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ .row2:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ .icons
+ {
+  font-size: 50px;
+ }
+ .aboutSection
+ {
+   margin-top:-15%;
+   margin-left: 27%;
+   font-size: 12px;
+   margin-right: 2%;
+   margin-bottom: 4%;
+   
+ 
+ }
+ .aboutSectionSmallScreen{
+  margin-top:-15%;
+  margin-left: 27%;
+  font-size: 12px;
+  margin-right: 2%;
+  margin-bottom: 4%;
+ }
+    
+    /* Media query for large screens */
+  @media screen and (max-width: 320px){
+    .portfolioSection {
+      transition: margin-top 0.5s;
+      background-color: #001442;
+      width: 61%; /* Adjust width for large screens */
+      margin-top: -480px;
+      margin-left: 2%; /* Adjust left margin for large screens */
+      margin-right: 2%;
+      height: 12%;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(25, 24, 24, 0.5);
+      color: rgb(245, 245, 245);
+      position: absolute;
+    }
+    
+    .sidebar-open {
+      margin-top: -56px; /* Adjust this value according to your sidebar width */
+    }
+   
+    .portfolioSection .innerPort
+    {
+       background-color: white ;
+       width: 10%;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 82%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(25, 24, 24, 0.5);
+    color : rgb(15, 15, 15);
+    position: absolute;
+    }
+    
+    .aboutSectionSmallScreen
+    {
+      transition: margin-top 0.5s;
+      margin-top:-340px;
+      margin-left: 2%;
+      font-size: 12px;
+      margin-right: 2%;
+      margin-bottom: 4%;
+      
+    }
+    
+     .sidebar-openSmall {
+      margin-top:64px; /* Adjust this value according to your sidebar width */
+    }
+  }
+    
+  
+   
+  
+   .portfolioSection .innerPort
+   {
+      background-color: white ;
+      width: 97%;
+   margin-top: 1%;
+   margin-left: 1%;
+   margin-right: 1%;
+   height: 72%;
+   border-radius: 5px;
+   box-shadow: 0 2px 4px rgba(25, 24, 24, 0.5);
+   color : rgb(15, 15, 15);
+   position: absolute;
+   }
+  
+   .innerPort .row1
+   {
+    margin-left: 20%;
+    margin-top: 6%;
+   }
+   .innerPort .row2
+   {
+    margin-left: 20%;
+    margin-top: 6%;
+   }
+   .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 20px; /* Should be removed. Only for demonstration */
+  }
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .row2:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .icons
+  {
+   font-size: 23px;
+  }
+  
+  
+  /* -------------------------------------- 1440 size------------------------------------------ */
+
+  @media screen and (min-width: 1440px) and (max-width : 1028){
+    .sidebar1 {
+      width: 260px;
+      background-color: #f4f4f4;
+      top: 9%;
+      left: -453px;
+      height: 64%;
+      transition: left 0.3s ease-in-out;
+      position: absolute;
+  
+      background-color: white;
+   /* Adjust width for large screens */
+    margin-left:5%; /* Adjust left margin for large screens */
+    margin-top: 2%;
+    margin-bottom: 3%;
+   /* Change from fixed height to auto */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(70, 69, 69, 0.5);
+    color: rgb(15, 15, 15);
+   ;
+    }
+   
+
+    .portfolioSection {
+      background-color: #001442;
+      width: 67%; /* Adjust width for large screens */
+      margin-top: -6%;
+      margin-left: 22.5%; /* Adjust left margin for large screens */
+      margin-right: 3%;
+      height: 39%;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(25, 24, 24, 0.5);
+      color: rgb(245, 245, 245);
+      position: absolute;
+    }
+
+    .aboutSectionSmallScreen{
+      margin-top:-7%;
+      margin-left: 27%;
+      font-size: 15px;
+      margin-right: 2%;
+      margin-bottom: 4%;
+     }
+     .vertical-line {
+      border-left: 1px solid black; /* Adjust thickness and color as needed */
+      height: 550px; /* Adjust height as needed */
+      width: 100%;
+      border-color: rgb(223, 220, 220);
+      margin-left: 24%;/* Optional margin to separate from other content */
+    }
+    .horizontal-line {
+      border-bottom: 1px solid black; /* Adjust thickness and color as needed */
+      margin-top: 8.5%;
+      width: 100%;
+      border-color: rgb(214, 212, 212);
+      margin-left: 24%;
+      margin-right: 70%;
+      border-radius: 15px;
+       /* Optional margin to separate from other content */
+    }
+
+  }
+
+  
+  /* ---------------------------------------768-------------------------------------- */
+
+  @media screen and (max-width: 768px) and (min-width :756px){
+    .sidebar1 {
+      width: 190px;
+      background-color: #f4f4f4;
+      top: 9%;
+      left: -453px;
+      height: 54%;
+      transition: left 0.3s ease-in-out;
+      position: absolute;
+  
+      background-color: white;
+   /* Adjust width for large screens */
+    margin-left:2%; /* Adjust left margin for large screens */
+    margin-top: 0.2%;
+    margin-bottom: 3%;
+   /* Change from fixed height to auto */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(70, 69, 69, 0.5);
+    color: rgb(15, 15, 15);
+   ;
+    }
+   
+
+    .portfolioSection {
+      background-color: #001442;
+      width: 64%; /* Adjust width for large screens */
+      margin-top: -68%;
+      margin-left: 28.5%; /* Adjust left margin for large screens */
+      margin-right: 3%;
+      height: 33%;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(25, 24, 24, 0.5);
+      color: rgb(245, 245, 245);
+      position: absolute;
+    }
+
+    .aboutSectionSmallScreen{
+      margin-top:-26%;
+      margin-left: 30%;
+      font-size: 14px;
+      margin-right: 2%;
+      margin-bottom: 4%;
+     }
+     .vertical-line {
+      border-left: 1px solid black; /* Adjust thickness and color as needed */
+      height: 550px; /* Adjust height as needed */
+      width: 100%;
+      border-color: rgb(223, 220, 220);
+      margin-left: 28%;/* Optional margin to separate from other content */
+    }
+    .horizontal-line {
+      border-bottom: 1px solid black; /* Adjust thickness and color as needed */
+      margin-top: 12.5%;
+      width: 100%;
+      border-color: rgb(214, 212, 212);
+      margin-left: 28%;
+      margin-right: 70%;
+      border-radius: 15px;
+       /* Optional margin to separate from other content */
+    }
+    .headerLink1 a{
+      color: rgb(216, 148, 2);
+      font-weight: bolder;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 14PX;
+    }
+
+    .link{
+  
+     float: right;
+     margin-left:2%;
+     margin-top: .5%;
+     
+      
+    }
+
+  }
+  
+  /* -------------------------------------------------------------1024----------------------------------------------------- */
+  
+  @media screen and (min-width: 1024px) and (max-width :1124) {
+    .sidebar1 {
+      width: 230px;
+      background-color: #f4f4f4;
+      position: fixed;
+      top: 11%;
+      left: -453px;
+      height: 70%;
+      transition: left 0.3s ease-in-out;
+      position: absolute;
+  
+      background-color: white;
+   /* Adjust width for large screens */
+    margin-left:5%; /* Adjust left margin for large screens */
+    margin-top: -1%;
+    margin-bottom: 3%;
+   /* Change from fixed height to auto */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(70, 69, 69, 0.5);
+    color: rgb(15, 15, 15);
+   ;
+    }
+    .portfolioSection {
+      background-color: #001442;
+      width: 63%; /* Adjust width for large screens */
+      margin-top: -30%;
+      margin-left: 25.5%; /* Adjust left margin for large screens */
+      margin-right: 2%;
+      height: 30%;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(25, 24, 24, 0.5);
+      color: rgb(245, 245, 245);
+      position: absolute;
+    }
+    .aboutSectionSmallScreen{
+      margin-top:60%;
+      margin-left: 29%;
+      font-size: 14px;
+      margin-right: 2%;
+      margin-bottom: 4%;
+     }
+
+     .vertical-line {
+      border-left: 1px solid black; /* Adjust thickness and color as needed */
+      height: 540px; /* Adjust height as needed */
+      width: 100%;
+      border-color: rgb(223, 220, 220);
+      margin-left: 27%;/* Optional margin to separate from other content */
+      margin-bottom: -23%;
+    }
+    .horizontal-line {
+      border-bottom: 1px solid black; /* Adjust thickness and color as needed */
+      margin-top: 9.5%;
+      width: 100%;
+      border-color:rgb(41, 38, 38);
+      margin-left: 27%;
+      margin-right: 70%;
+      border-radius: 15px;
+       /* Optional margin to separate from other content */
+    }
+    
+  
+
+  }
