@@ -1,120 +1,140 @@
-import React, {useState} from 'react';
-import axios from 'axios';
-import "../../styles/login.scss"
-import { Link } from 'react-router-dom';
-import {sz} from '../../assets/index'
-import Investorpage from '../../pages/Investorpage';
-import Investors from '../../pages/Investors';
+import React, { useState } from "react";
+import axios from "axios";
+import "../../styles/login.scss";
+import { Link } from "react-router-dom";
+import { sz } from "../../assets/index";
+// import Investorpage from "../../pages/Investorpage";
+// import Investors from '../../pages/Investors';
+
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [userType, setUserType] = useState('investor');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [user_type, setUserType] = useState("investor");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
-      const response = await axios.post('/api/login', {
+      const response = await axios.post("http://localhost:3000/api/login", {
         username,
         password,
-        userType
-      });
-      // Assuming your backend sends a token upon successful authentication
-      const token = response.data.token;
-      // Save the token in local storage or session storage for future requests
-      localStorage.setItem('token', token);
-      // Redirect the user to their respective dashboard based on their user type
-      switch (userType) {
-        case 'investor':
-          window.location.href = '/investor-dashboard';
-          break;
-        case 'distributor':
-          window.location.href = '/distributor-dashboard';
-          break;
-        case 'administrator':
-          window.location.href = '/admin-dashboard';
-          break;
-        default:
-          break;
+        user_type,
+      }); 
+      setLoading(false);
+      if (response.status === 200) {
+        const { token } = response.data;
+        localStorage.setItem('token', token);
+        // Redirect to dashboard or any other page
+        switch (user_type) {
+          case "investor":
+            window.location.href = "/investor-dashboard";
+            break;
+          case "distributor":
+            window.location.href = "/distributor-dashboard";
+            break;
+          case "administrator":
+            window.location.href = "/admin/dashboard";
+            break;
+          default:
+            break;
+        }
       }
     } catch (error) {
-      // Handle authentication error
-      console.error('Authentication failed:', error);
+      setLoading(false);
+      setError("Invalid username or password");
     }
   };
 
   return (
-     <section id='loginSection'>
-       <div className="loginComponent">
-      <div className='szlogo'>
-        <Link > 
-        <img src={sz} alt="Smart Zindagi" />
-        </Link>
-      </div>
+    <body>
+    <main>
+    <div className="loginComponent">
       
-       <form className='loginContainer' onSubmit={handleSubmit}>
-      <div className='loginHeader'>
-        <h4>Manage Your Account</h4>
+    
+    
+      <div className="image">
+      <Link to="/">
+          <img src={sz} width={80} height={80} alt="Smart Zindagi" />
+         </Link>
+         
       </div>
+      <form onSubmit={handleSubmit}>
 
+<div className="loginForm">
+  
+  <div> 
+  <p> Manage Your Account...</p>
+<div className="inputs"> 
+      <label >Login as : </label>
+      <select className="dropdown"
+       name="user_type"
+               value={user_type}
+              onChange={(e) => setUserType(e.target.value)}
+      >
+                  
+                 <option value="investor">Investor</option>
+                 <option value="distributor">Distributor</option>
+                <option value="administrator">Administrator</option>
+
+      </select>
+       </div>
+
+       <div className="inputs">
+      <label > Username  :</label> 
+      <input type="text" name="username"
+               placeholder=" Enter the username"
+               value={username}
+             onChange={(e) => setUsername(e.target.value)}/>
+      </div>
       <div className="inputs">
-      <div>
-        <label htmlFor="loginAs">Login As:</label>
-        <select id="loginAs" name="loginAs" value={userType} onChange={(e) => setUserType(e.target.value)}>
-          <option value="investor">Investor</option>
-          <option value="distributor">Distributor</option>
-          <option value="administrator">Administrator</option>
-        </select>
-      </div>
-      <div>
-        <label htmlFor="userName">User Name:</label>
-        <input type="text" id="userName" placeholder="Enter User Name" name="userName" value={username} onChange={(e) => setUsername(e.target.value)} />
-      </div>
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input type="password" id="password" placeholder="Enter Your Password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </div>
+      <label > Password :</label>
+      <input
+                 type="password"
+                 name="password"
+                placeholder=" Enter Your Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+               />
       </div>
 
-      <p className='credentials'>
-        Login credentials are case sensitive
-       </p>
-      <button type='submit' id='login' onClick={<Link to="/pages/Investors"></Link>}>Login</button>
-      <Link to="/pages/Investors"> investors</Link>
-      <Link to="/pages/Investorpage"> Investorpage</Link>
-      </form>
-        
-        {/* loin footer like forgot  */}
-         <div className='underline'>
-          <Link to=" ">Forgot Password?</Link>
-         </div>
+      {error && <p className="error">{error}</p>}
+<div>
+<h6 className="credential">Login credentials are case sensitive</h6>
+<button type="submit" id="login" disabled={loading}>
+ {loading ? "Logging in..." : "Login"}
+ </button></div>
+ <div>
+  <div className="footer">
+<h6 className="hyperlink"><Link to="/">Forgot Password?</Link></h6>
 
-         <div className='underline'>
-          <Link to=" ">Don't have an Account? Create new</Link>
-         </div>
-    </div>
-     </section>
+<h6 className="createNew"><Link to="/sign-up">Create new Account</Link></h6>
+
+</div>
+</div>
+</div>
+</div>
+        </form>
+    
+
+  </div>
+</main>
+</body>
   );
 };
 
 export default Login;
 
 
-
-
-
-
-
-
-
-
 // const Login = () => {
 //   return (
 //     <>
-//     <form className='loginContainer'> 
+//     <form className='loginContainer'>
 //       <div className='loginHeader'>
 //         <h4>Manage Your Account</h4>
 //       </div>
-      
+
 //       <div className="inputs">
 //       <div >
 //         <label htmlFor="loginAs">Login as:</label>

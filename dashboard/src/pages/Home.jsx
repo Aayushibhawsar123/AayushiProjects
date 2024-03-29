@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 // import LoginPage from './LoginPage'
+
 import Login from '../components/login/Login.jsx'
 
 const Home = () => {
   return (
     <>
+    <body style={{backgroundColor:"hsl(213deg 85% 97%)"}}>
     <div>
       <Link to= "/">
       Home
@@ -15,12 +17,14 @@ const Home = () => {
 <Link to= "/admin/dashboard">
   Go to dashboard
 </Link>
-
-<section  style={{backgroundColor:"black"}}>
+<Link to="/pages/Investors"> investors</Link>
+      <Link to="/pages/Investorpage"> Investorpage</Link>
+<section >
   <div>
     <Login />
   </div>
 </section>
+</body>
 </>
   )
 }
