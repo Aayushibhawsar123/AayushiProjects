@@ -1,15 +1,22 @@
+.mainlogin
+{
+  width: 100%;
+  height: 94.5vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
 
+}
 .loginComponent{
-       display: flex;
+
        background:  hsl(218deg 50% 91%);
       margin-top: 5%;
-      margin-left: 35%;
+      margin-left: 38%;
       user-select: none;
 	overflow-y: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-      height: 100%; /* Change from fixed height to auto */
+      // height: 100%; /* Change from fixed height to auto */
       border-radius: 5px;
       box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
       color: rgb(15, 15, 15);
@@ -144,10 +151,10 @@ margin-bottom: 9%;
     
 // --------------------------------------------------------------------moblie screen------------------------------------------//
 
-@media only screen and (min-width: 320px)  and (max-width :425px){
+@media only screen and (min-width: 320px)  and (max-width :765px){
 
     .loginComponent{
-       display: flex;
+  
         background:  hsl(218deg 50% 91%);
        margin-top: 5%;
        margin-left: 5%;
@@ -156,7 +163,7 @@ margin-bottom: 9%;
      display: flex;
      justify-content: center;
      align-items: center;
-       height: 100%; /* Change from fixed height to auto */
+      //  height: 100%; /* Change from fixed height to auto */
        border-radius: 5px;
        box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
        color: rgb(15, 15, 15);
@@ -169,7 +176,7 @@ margin-bottom: 9%;
 @media only screen and (min-width: 768px)  and (max-width :984px){
 
     .loginComponent{
-       display: flex;
+     
         background:  hsl(218deg 50% 91%);
        margin-top: 5%;
        margin-left: 35%;
@@ -178,7 +185,7 @@ margin-bottom: 9%;
      display: flex;
      justify-content: center;
      align-items: center;
-       height: 100%; /* Change from fixed height to auto */
+      //  height: 100%; /* Change from fixed height to auto */
        border-radius: 5px;
        box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
        color: rgb(15, 15, 15);
@@ -193,7 +200,7 @@ margin-bottom: 9%;
 @media only screen and (min-width: 1024px)  and (max-width :1200px){
 
     .loginComponent{
-       display: flex;
+
         background:  hsl(218deg 50% 91%);
        margin-top: 5%;
        margin-left: 35%;
@@ -202,7 +209,7 @@ margin-bottom: 9%;
      display: flex;
      justify-content: center;
      align-items: center;
-       height: 100%; /* Change from fixed height to auto */
+      //  height: 100%; /* Change from fixed height to auto */
        border-radius: 5px;
        box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
        color: rgb(15, 15, 15);

@@ -50,6 +50,7 @@ const Login = () => {
   return (
     <body>
     <main>
+      <div className="mainlogin">
     <div className="loginComponent">
       
     
@@ -118,6 +119,7 @@ const Login = () => {
         </form>
     
 
+  </div>
   </div>
 </main>
 </body>
