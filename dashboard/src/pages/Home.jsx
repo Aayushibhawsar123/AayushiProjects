@@ -7,9 +7,9 @@ import Login from '../components/login/Login.jsx'
 const Home = () => {
   return (
     <>
-    <body style={{backgroundColor:"hsl(213deg 85% 97%)"}}>
-    <div>
-      <Link to= "/">
+    <body >
+    {/* <div> */}
+      {/* <Link to= "/" >
       Home
       </Link>
     </div>
@@ -18,7 +18,7 @@ const Home = () => {
   Go to dashboard
 </Link>
 <Link to="/pages/Investors"> investors</Link>
-      <Link to="/pages/Investorpage"> Investorpage</Link>
+      <Link to="/pages/Investorpage"> Investorpage</Link> */}
 <section >
   <div>
     <Login />

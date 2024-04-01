@@ -1,218 +1,188 @@
-.mainlogin
-{
+.mainlogin {
   width: 100%;
-  height: 94.5vh;
+  height: 100vh;
   overflow-y: hidden;
   overflow-x: hidden;
-
+  background-color: hsl(213deg 85% 97%);
 }
-.loginComponent{
-
-       background:  hsl(218deg 50% 91%);
-      margin-top: 5%;
-      margin-left: 38%;
-      user-select: none;
-	overflow-y: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-      // height: 100%; /* Change from fixed height to auto */
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
-      color: rgb(15, 15, 15);
-      width: 25%;
-
-       .image{
-                background-color: white;
-            margin-top: -353px;
-                border-radius: 78px;
-                box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
-                color: rgb(15, 15, 15);
-                 margin-left: 18%;
-                display: flex;
-                height: 80PX;
-                width: 80PX;
-              
-               }
-               .loginContainer img {
-                  color:white; 
-                  display: flex;
-                text-align: center ;
-               }
-             
-               .loginForm
-               {
-                margin-top: 170px;
-                margin-left: -184px;
-             display: flex;
-               }
-
-               .loginForm p {
- margin-left: 23px;
- margin-top: 32px;
- font-size: 14px;
- font-weight: 400;
-               };
-              
-               .inputs{
-                margin-top: 7%;
-                border-radius: 9px;
-                box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
-                width: 200px;
-margin-bottom: 9%;
-                margin-left: 49px;
-                background-color: white ;
-                
-                
-            }
-            .inputs label {
-     font-weight: 300;
-     font-size: 14px;
-     margin-left: 4%;
-
-     display: flex;
-     
-            };
-                
-        .inputs input {
-            margin-left: 4.8%;
-            width: 180px;
-            height: 24px;
-            border: 1px solid white; /* Border color */
-            border-radius: 5px;
-            color: rgb(24, 21, 21);
-          
-                  };
-            
-        .dropdown{
-            margin-left: 6%;
-            margin-top: -8%;
-            width: 170px;
-            height: 20px;
-            border: 1px solid #fffdfd; /* Border color */
+.loginComponent {
+  background: hsl(218deg 50% 91%);
+  margin-top: 5%;
+  margin-left: 38%;
+  user-select: none;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100%; /* Change from fixed height to auto */
   border-radius: 5px;
-  color: rgb(100, 99, 99);
-  
-        }
+  box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
+  color: rgb(15, 15, 15);
+  width: 25%;
+
+  .image {
+    background-color: white;
+    margin-top: -353px;
+    border-radius: 78px;
+    box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
+    color: rgb(15, 15, 15);
+    margin-left: 30%;
+    display: flex;
+    height: 80px;
+    width: 80px;
+  }
+  .loginContainer img {
+    color: white;
+    display: flex;
+    text-align: center;
+  }
+
+  .loginForm {
+    margin-top: 170px;
+    margin-left: -184px;
+    display: flex;
+  }
+
+  .loginForm p {
+    margin-left: 70px;
+    margin-top: 32px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .inputs {
+    margin-top: 7%;
+    border-radius: 9px;
+    box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
+    width: 250px;
+    margin-bottom: 9%;
+    margin-left: 19px;
+    background-color: white;
     
-          
-        .credential {
-            font-size: 12px;
-            margin-top: 45px;
-            margin-left: 20%;
-            
-            color: red;
-        }
+  }
+  .inputs label {
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 4%;
 
-        #login{
-            width: 70px;
-            height: 25px;
-            text-align: center;
-            font-weight: 600;
-            background-color: green;
-            color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
-            margin-left: 43%;
-            margin-top: 6%;
+    display: flex;
+  }
 
-        }
+  .inputs input {
+    margin-left: 4.8%;
+    width: 206px;
+    height: 24px;
+    border: 1px solid white; /* Border color */
+    border-radius: 5px;
+    color: rgb(66, 63, 63);
+    outline: none;
     
+  }
 
-          
+  .dropdown {
+    margin-left: 6%;
+    margin-top: -8%;
+    width: 170px;
+    height: 20px;
+    border: 1px solid #fffdfd; /* Border color */
+    border-radius: 5px;
+    color: rgb(100, 99, 99);
+    outline: none;
+  }
 
-  
-        
+  .credential {
+    font-size: 12px;
+    margin-top: 45px;
+    margin-left: 15%;
 
-       
-       
-     
+    color: red;
+  }
 
-        .footer
-        {
-          margin-left: 10%;
-          display: flex;
-          margin-top: 45px;
-           margin-bottom: 12%;
-        }
+  #login {
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    font-weight: 600;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(9, 247, 100, 0.5);
+    margin-left: 7%;
+    margin-top: 6%;
+  }
 
-        .footer a {
-          color: blue   
-        };
-        .createNew
-        {
-            margin-left: 59.1px;
-            margin-right: -78px;
-            
-        }
-    }
-    
-    
-    
+  .footer {
+    margin-left: 10%;
+    display: flex;
+    margin-top: 45px;
+    margin-bottom: 12%;
+  }
+
+  .footer a {
+    color: blue;
+  }
+  .createNew {
+    margin-left: 59.1px;
+    margin-right: -78px;
+  }
+}
+
 // --------------------------------------------------------------------moblie screen------------------------------------------//
 
-@media only screen and (min-width: 320px)  and (max-width :765px){
-
-    .loginComponent{
-  
-        background:  hsl(218deg 50% 91%);
-       margin-top: 5%;
-       margin-left: 5%;
-       user-select: none;
-     overflow-y: hidden;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-      //  height: 100%; /* Change from fixed height to auto */
-       border-radius: 5px;
-       box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
-       color: rgb(15, 15, 15);
-       width: 85%;
-    }
+@media only screen and (min-width: 320px) and (max-width: 765px) {
+  .loginComponent {
+    background: hsl(218deg 50% 91%);
+    margin-top: 5%;
+    margin-left: 5%;
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //  height: 100%; /* Change from fixed height to auto */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
+    color: rgb(15, 15, 15);
+    width: 85%;
   }
+}
 
 // -----------------------------------------------------------------tablet screen//----------------------------------------------//
 
-@media only screen and (min-width: 768px)  and (max-width :984px){
-
-    .loginComponent{
-     
-        background:  hsl(218deg 50% 91%);
-       margin-top: 5%;
-       margin-left: 35%;
-       user-select: none;
-     overflow-y: hidden;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-      //  height: 100%; /* Change from fixed height to auto */
-       border-radius: 5px;
-       box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
-       color: rgb(15, 15, 15);
-       width: 35%;
-    }
+@media only screen and (min-width: 768px) and (max-width: 984px) {
+  .loginComponent {
+    background: hsl(218deg 50% 91%);
+    margin-top: 5%;
+    margin-left: 35%;
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //  height: 100%; /* Change from fixed height to auto */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
+    color: rgb(15, 15, 15);
+    width: 35%;
   }
+}
 
-
-  
 // -----------------------------------------------------------------laptop screen//----------------------------------------------//
 
-@media only screen and (min-width: 1024px)  and (max-width :1200px){
-
-    .loginComponent{
-
-        background:  hsl(218deg 50% 91%);
-       margin-top: 5%;
-       margin-left: 35%;
-       user-select: none;
-     overflow-y: hidden;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-      //  height: 100%; /* Change from fixed height to auto */
-       border-radius: 5px;
-       box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
-       color: rgb(15, 15, 15);
-       width: 28%;
-    }
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .loginComponent {
+    background: hsl(218deg 50% 91%);
+    margin-top: 5%;
+    margin-left: 35%;
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //  height: 100%; /* Change from fixed height to auto */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(12, 11, 11, 0.5);
+    color: rgb(15, 15, 15);
+    width: 28%;
   }
+}

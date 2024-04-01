@@ -21,11 +21,11 @@ const Login = () => {
         username,
         password,
         user_type,
-      }); 
+      });
       setLoading(false);
       if (response.status === 200) {
         const { token } = response.data;
-        localStorage.setItem('token', token);
+        localStorage.setItem("token", token);
         // Redirect to dashboard or any other page
         switch (user_type) {
           case "investor":
@@ -49,85 +49,84 @@ const Login = () => {
 
   return (
     <body>
-    <main>
-      <div className="mainlogin">
-    <div className="loginComponent">
-      
-    
-    
-      <div className="image">
-      <Link to="/">
-          <img src={sz} width={80} height={80} alt="Smart Zindagi" />
-         </Link>
-         
-      </div>
-      <form onSubmit={handleSubmit}>
+      <main>
+        <div className="mainlogin">
+          <div className="loginComponent">
+            <div className="image">
+              <Link to="/">
+                <img src={sz} width={80} height={80} alt="Smart Zindagi" />
+              </Link>
+            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="loginForm">
+                <div>
+                  <p> Manage Your Account...</p>
+                  <div className="inputs">
+                    <label>Login as : </label>
+                    <select
+                      className="dropdown"
+                      name="user_type"
+                      value={user_type}
+                      onChange={(e) => setUserType(e.target.value)}
+                    >
+                      <option value="investor">Investor</option>
+                      <option value="distributor">Distributor</option>
+                      <option value="administrator">Administrator</option>
+                    </select>
+                  </div>
 
-<div className="loginForm">
-  
-  <div> 
-  <p> Manage Your Account...</p>
-<div className="inputs"> 
-      <label >Login as : </label>
-      <select className="dropdown"
-       name="user_type"
-               value={user_type}
-              onChange={(e) => setUserType(e.target.value)}
-      >
-                  
-                 <option value="investor">Investor</option>
-                 <option value="distributor">Distributor</option>
-                <option value="administrator">Administrator</option>
+                  <div className="inputs">
+                    <label> Username :</label>
+                    <input
+                      type="text"
+                      name="username"
+                      placeholder=" Enter the username"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                    />
+                  </div>
+                  <div className="inputs">
+                    <label> Password :</label>
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder=" Enter Your Password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                  </div>
 
-      </select>
-       </div>
+                  {error && <p className="error">{error}</p>}
+                  <div>
+                    <h6 className="credential">
+                      Login credentials are case sensitive
+                    </h6>
+                    <button type="submit" id="login" disabled={loading}>
+                      {loading ? "Logging in..." : "Login"}
+                    </button>
+                  </div>
+                  <div>
+                    <div className="footer">
+                      <h6 className="hyperlink">
+                        <Link to="/">Forgot Password?</Link>
+                      </h6>
 
-       <div className="inputs">
-      <label > Username  :</label> 
-      <input type="text" name="username"
-               placeholder=" Enter the username"
-               value={username}
-             onChange={(e) => setUsername(e.target.value)}/>
-      </div>
-      <div className="inputs">
-      <label > Password :</label>
-      <input
-                 type="password"
-                 name="password"
-                placeholder=" Enter Your Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-               />
-      </div>
-
-      {error && <p className="error">{error}</p>}
-<div>
-<h6 className="credential">Login credentials are case sensitive</h6>
-<button type="submit" id="login" disabled={loading}>
- {loading ? "Logging in..." : "Login"}
- </button></div>
- <div>
-  <div className="footer">
-<h6 className="hyperlink"><Link to="/">Forgot Password?</Link></h6>
-
-<h6 className="createNew"><Link to="/sign-up">Create new Account</Link></h6>
-
-</div>
-</div>
-</div>
-</div>
-        </form>
-    
-
-  </div>
-  </div>
-</main>
-</body>
+                      <h6 className="createNew">
+                        <Link to="/sign-up">Create new Account</Link>
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </body>
   );
 };
 
 export default Login;
-
 
 // const Login = () => {
 //   return (
