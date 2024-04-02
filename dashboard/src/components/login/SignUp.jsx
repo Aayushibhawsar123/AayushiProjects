@@ -40,9 +40,12 @@ const SignUp = () => {
         }
 
         if (name === 'date_of_birth') {
-            const year = new Date(value).getFullYear();
-            if (year < 2005) {
-                alert('Please select a year above 2005');
+            const dob = new Date(value);
+            const year = dob.getFullYear();
+            const month = dob.getMonth() + 1; // Adding 1 to get the month from 1 to 12
+        
+            if (year > 2005 || (year === 2005 && month > 12)) {
+                alert('Please select a date before 31st December 2005');
                 return; // Do not update state if validation fails
             }
         }
