@@ -10,6 +10,8 @@ import Dropdown from './components/Dropdown';
 import InsuranceForm from './components/forms/InsuranceForm';
 import Investors from './pages/Investors';
 import Investorpage from './pages/Investorpage';
+import SignUp from './components/login/SignUp';
+import Login from './components/login/Login';
 const Dashboard = lazy(() => import("./pages/Dashboard")) ;
 const Products = lazy(() => import("./pages/Products")) ;
 const Transaction = lazy(() => import("./pages/Transaction")) ;
@@ -35,8 +37,8 @@ const App = () => {
         <Route path="/admin/customer/dropdown" element={<Dropdown />}  />
         <Route path="/pages/Investors" element={<Investors/>}  />
         <Route path="/pages/Investorpage" element={<Investorpage/>}  />
-
-
+      <Route path ="/components/login/SignUp"element={<SignUp/>}/>
+<Route path ="/components/login/Login" element={<Login/>}/>
 
 
       </Routes>

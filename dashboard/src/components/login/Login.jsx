@@ -112,7 +112,7 @@ const Login = () => {
                       </h6>
 
                       <h6 className="createNew">
-                        <Link to="/sign-up">Create new Account</Link>
+                        <Link to="/components/login/SignUp">Create new Account</Link>
                       </h6>
                     </div>
                   </div>
