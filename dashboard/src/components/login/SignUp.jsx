@@ -18,47 +18,61 @@ const SignUp = () => {
         pan_number: ''
     });
 
+    const [errors, setErrors] = useState({
+        password: '',
+        date_of_birth: ''
+    });
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         let updatedValue = value;
+        let errorMessage = '';
 
-        // Validation for phone number (10 digits only)
         if (name === 'phone_number') {
-            updatedValue = value.replace(/\D/g, '').slice(0, 10);
+        updatedValue = value.replace(/\D/g, '').slice(0, 10);
+        if (updatedValue.length !== 10) {
+            errorMessage = 'Phone number should contain exactly 10 digits';
         }
-
+    }
         // Validation for email (must contain '@' and end with '.com')
         if (name === 'email') {
-            if (!value.includes('@') || !value.endsWith('.com')) {
-                return; // Do not update state if validation fails
+            const atIndex = value.indexOf('@');
+            const dotIndex = value.lastIndexOf('.');
+            if (atIndex === -1 || dotIndex === -1 || dotIndex < atIndex || dotIndex === value.length - 1 || atIndex !== value.lastIndexOf('@')) {
+                errorMessage = 'Invalid email format.';
             }
         }
+        
 
         // Validation for PAN card (must have 5 characters followed by 4 digits)
         if (name === 'pan_number') {
-            updatedValue = value.slice(0, 9); 
+        if (value.length > 9) {
+            errorMessage = 'PAN number should be exactly 9 characters long';
+        } else if (!/^[A-Z]{5}[0-9]{4}[A-Z]$/.test(value)) {
+            errorMessage = 'Invalid PAN format. like ABCDE1234F';
         }
+        updatedValue = value.toUpperCase(); // Convert to uppercase
+    }
 
-        if (name === 'date_of_birth') {
-            const dob = new Date(value);
-            const year = dob.getFullYear();
-            const month = dob.getMonth() + 1; // Adding 1 to get the month from 1 to 12
-        
-            if (year > 2005 || (year === 2005 && month > 12)) {
-                alert('Please select a date before 31st December 2005');
-                return; // Do not update state if validation fails
-            }
-        }
 
         // Validation for password (minimum length of 8 characters)
         if (name === 'password') {
             if (value.length < 8) {
-                alert('Password should be at least 8 characters long');
-                return; // Do not update state if validation fails
+                errorMessage = 'Password should be at least 8 characters long';
+            }
+        }
+
+        // Validation for DOB
+        if (name === 'date_of_birth') {
+            const dob = new Date(value);
+            const currentDate = new Date();
+            if (dob >= currentDate) {
+                errorMessage = 'invalid date of birth';
             }
         }
 
         setCreateNewData({ ...createnewData, [name]: updatedValue });
+        setErrors({ ...errors, [name]: errorMessage });
     };
 
     const handleSubmit = async (e) => {
@@ -105,18 +119,23 @@ const SignUp = () => {
                         <div className='signInput'>
                             <label> Email :</label>
                             <input type="email" id="email" placeholder="Enter Your Email" value={createnewData.email} name="email" onChange={handleChange} />
+                            {errors.email && <span className="error">{errors.email}</span>}
+
                         </div>
                         <div className='signInput'>
                             <label> Password :</label>
                             <input type="password" id="password" placeholder="Enter Your Password" value={createnewData.password} name="password" onChange={handleChange} />
+                            {errors.password && <span className="error">{errors.password}</span>}
                         </div>
                         <div className='signInput'>
                             <label> Contact No :</label>
                             <input type="text" id="phone" placeholder="Enter Your Contact Number" value={createnewData.phone_number} name="phone_number" onChange={handleChange} />
+                            {errors.phone_number && <span className="error">{errors.phone_number}</span>}
                         </div>
                         <div className='signInput'>
                             <label> Address:</label>
                             <input type="text" id="address" placeholder="Enter Your Address" value={createnewData.address} name="address" onChange={handleChange} />
+                             
                         </div>
                         <div className='signInput'>
                             <label> City :</label>
@@ -129,14 +148,18 @@ const SignUp = () => {
                         <div className='signInput'>
                             <label> Pincode:</label>
                             <input type="text" id="pin" placeholder="Enter Your Pin" value={createnewData.pin} name="pin" onChange={handleChange} />
+                            {errors.pin && <span className="error">{errors.pin}</span>}
                         </div>
                         <div className='signInput'>
                             <label> DOB :</label>
                             <input type="date" id="date-of-birth" placeholder="Enter Your Date of Birth" value={createnewData.date_of_birth} name="date_of_birth" onChange={handleChange} />
+                            {errors.date_of_birth && <span className="error">{errors.date_of_birth}</span>}
                         </div>
                         <div className='signInput'>
                             <label> PanCard No :</label>
                             <input type="text" id="pan-number" placeholder="Enter Your Pancard Number" value={createnewData.pan_number} name="pan_number" onChange={handleChange} />
+                            {errors.pan_number && <span className="error">{errors.pan_number}</span>}
+
                         </div>
                         <button type="submit" id="button"> Create New Account </button>
                     </div>
